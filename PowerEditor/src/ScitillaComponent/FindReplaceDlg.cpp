@@ -214,6 +214,8 @@ void Searching::displaySectionCentered(int posStart, int posEnd, ScintillaEditVi
 	pEditView->scroll(0, linesToScroll);
 
 	//Make sure the caret is visible, scroll horizontally (this will also fix wrapping problems)
+
+	//TODO : If backspace is pressed, posStart and posEnd must be changed.
 	pEditView->execute(SCI_GOTOPOS, posStart);
 	pEditView->execute(SCI_GOTOPOS, posEnd);
 
